@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:offical_flutter/widget/bottom_bar.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,10 +18,10 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
         title: "Yangflix",
         theme: ThemeData(
-          brightness: Brightness.light,
+          brightness: Brightness.dark,
           primaryColor: Colors.black,
           colorScheme: ColorScheme.fromSwatch()
-              .copyWith(secondary: Colors.white, brightness: Brightness.light),
+              .copyWith(secondary: Colors.white, brightness: Brightness.dark),
         ),
         home: DefaultTabController(
             length: 4,
@@ -28,13 +29,28 @@ class _MyAppState extends State<MyApp> {
               body: TabBarView(
                 physics: const NeverScrollableScrollPhysics(),
                 children: <Widget>[
-                  Container(),
-                  Container(),
-                  Container(),
-                  Container(),
+                  Container(
+                    child: const Center(
+                      child: Text('home'),
+                    ),
+                  ),
+                  Container(
+                      child: const Center(
+                    child: Text('search'),
+                  )),
+                  Container(
+                    child: const Center(
+                      child: Text('save'),
+                    ),
+                  ),
+                  Container(
+                    child: const Center(
+                      child: Text('more'),
+                    ),
+                  ),
                 ],
               ),
-              bottomNavigationBar: BottomBar(),
+              bottomNavigationBar: const Bottom(),
             )));
   }
 }
