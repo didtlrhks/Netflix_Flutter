@@ -17,18 +17,24 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
         title: "Yangflix",
         theme: ThemeData(
-          brightness: Brightness.dark,
+          brightness: Brightness.light,
           primaryColor: Colors.black,
-          colorScheme:
-              ColorScheme.fromSwatch().copyWith(secondary: Colors.white),
+          colorScheme: ColorScheme.fromSwatch()
+              .copyWith(secondary: Colors.white, brightness: Brightness.light),
         ),
-        home: const DefaultTabController(
+        home: DefaultTabController(
             length: 4,
             child: Scaffold(
               body: TabBarView(
-                physics: NeverScrollableScrollPhysics(),
-                children: <Widget>[],
+                physics: const NeverScrollableScrollPhysics(),
+                children: <Widget>[
+                  Container(),
+                  Container(),
+                  Container(),
+                  Container(),
+                ],
               ),
+              bottomNavigationBar: BottomBar(),
             )));
   }
 }
