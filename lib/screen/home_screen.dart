@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:offical_flutter/model/model_movie.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -8,6 +9,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  List<Movie> movies = [];
   @override
   void initState() {
     super.initState();
