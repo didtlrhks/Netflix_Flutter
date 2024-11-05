@@ -27,6 +27,7 @@ class TopBar extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.fromLTRB(20, 7, 20, 7),
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
           Image.asset(
             'images/nexflix.png',
@@ -37,6 +38,20 @@ class TopBar extends StatelessWidget {
             padding: const EdgeInsets.only(right: 1),
             child: const Text(
               'TV프로그램',
+              style: TextStyle(fontSize: 14),
+            ),
+          ),
+          Container(
+            padding: const EdgeInsets.only(right: 1),
+            child: const Text(
+              '영화',
+              style: TextStyle(fontSize: 14),
+            ),
+          ),
+          Container(
+            padding: const EdgeInsets.only(right: 1),
+            child: const Text(
+              '내가 찜한 컨텐츠',
               style: TextStyle(fontSize: 14),
             ),
           )
